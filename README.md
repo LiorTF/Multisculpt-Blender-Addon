@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33732607/README.md)
 # Multi Sculpt & Paint
 
 A Blender add-on for sculpting, vertex painting and weight painting **many
@@ -77,17 +76,3 @@ While a session runs, a red **Multi …** badge sits in the viewport header.
 | Write Other Attributes | on | Copy masks, face sets, creases back |
 | Allow Partial Apply | off | Write matching objects even if one broke |
 | Confirm Before Discarding | on | Ask before discarding a session |
-
-## Tests
-
-Headless tests live in `tests/` and run against a real Blender:
-
-```bash
-blender -b --factory-startup --python tests/test_roundtrip.py -- --addon-dir /path/to/multi_sculpt_paint
-```
-
-`test_roundtrip.py` covers the full edit→apply round trip (positions through a
-non-trivial transform, colours, weights, new groups, masks), mode switching,
-discard, topology-change refusal, and the input guards. `test_install.py` and
-`test_ui_check.py` verify enable/disable and that every panel icon and operator
-id is real.
